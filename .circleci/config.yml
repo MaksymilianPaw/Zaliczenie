@@ -2,17 +2,25 @@ version: 2.1
 jobs:
   build-and-test:
     docker:
-      - image: cimg/python:3.9
+      - image: cimg/base:stable
     steps:
       - checkout
-      - setup_remote_docker:
-          version: 20.10.14
-      - run: name: deps command: make deps
-      - run: name: lint command: make lint
-      - run: name: test command: make test
-      - run: name: docker_build command: make docker_build
-      - run: name: docker_push command: make docker_push
+      - run:
+          name: deps
+          command: make deps
+      - run:
+          name: lint
+          command: make lint
+      - run:
+          name: test
+          command: make test
+      - run:
+          name: docker_build
+          command: make docker_build
+      - run:
+          name: docker_push
+          command: make docker_push
 workflows:
-  zaliczenie:
+  zaliczenie_workflow:
     jobs:
       - build-and-test
