@@ -1,1 +1,1 @@
-# Zaliczenie
+Projekt zaliczeniowy - Maksymilian Pawlikowski # Zaliczenie
