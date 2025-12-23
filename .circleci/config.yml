@@ -1,0 +1,26 @@
+version: 2.1
+jobs:
+  build-and-test:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          name: deps
+          command: make deps
+      - run:
+          name: lint
+          command: make lint
+      - run:
+          name: test
+          command: make test
+      - run:
+          name: docker_build
+          command: make docker_build
+      - run:
+          name: docker_push
+          command: make docker_push
+workflows:
+  zaliczenie_workflow:
+    jobs:
+      - build-and-test
