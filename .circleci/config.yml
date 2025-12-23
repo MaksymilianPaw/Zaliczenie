@@ -21,6 +21,6 @@ jobs:
           name: docker_push
           command: make docker_push
 workflows:
-  zaliczenie_workflow:
+  zaliczenie-workflow:
     jobs:
       - build-and-test
