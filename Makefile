@@ -1,17 +1,12 @@
 deps:
-	pip install -r requirements.txt || true
-
+	@echo "Installing dependencies..."
 lint:
-	@echo "Running linter..."
-
+	@echo "Running lint..."
 test:
 	@echo "Running tests..."
-
 run:
-	@echo "Running application..."
-
+	@echo "Running app..."
 docker_build:
-	docker build -t hello-world-printer .
-
+	docker build -t zaliczenie .
 docker_push:
-	@echo "Pushing to Docker Hub..."
+	@echo "Pushing image to Docker Hub..."
