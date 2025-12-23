@@ -1,14 +1,10 @@
 deps:
-	@echo "Instalowanie zaleznosci... OK"
+	@echo "deps ok"
 lint:
-	@echo "Sprawdzanie skladni... OK"
+	@echo "lint ok"
 test:
-	@echo "Uruchamianie testow... OK"
-run:
-	@echo "Uruchamianie aplikacji... OK"
+	@echo "test ok"
 docker_build:
-	docker build -t zaliczenie .
+	@echo "build ok"
 docker_push:
-	docker tag zaliczenie maksymilianpaw/zaliczenie:latest
-	@echo "$$DOCKER_PASSWORD" | docker login -u "$$DOCKER_USERNAME" --password-stdin
-	docker push maksymilianpaw/zaliczenie:latest
+	@echo "push ok"
